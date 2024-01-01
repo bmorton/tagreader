@@ -18,7 +18,7 @@ blueprint:
 
 variables:
     device_id: !input reader_id
-    reader: '{{ device_attr(device_id, "name") }}'
+    reader: '{{ device_attr(device_id, "name") | lower }}'
 
 trigger:
   - platform: event
